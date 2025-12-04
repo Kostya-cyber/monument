@@ -9,7 +9,8 @@ let initialCameraPosition = { x: 0, y: 2, z: 5 };
 function init() {
   // Создание сцены
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xf0f0f0);
+  // Более светлый фон для лучшей видимости модели
+  scene.background = new THREE.Color(0xffffff);
 
   // Получение контейнера
   const container = document.getElementById("model-container");
@@ -51,18 +52,31 @@ function init() {
 
   container.appendChild(renderer.domElement);
 
-  // Освещение
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+  // Освещение - более яркое и равномерное
+  // Основное окружающее освещение (увеличено для лучшей видимости)
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
   scene.add(ambientLight);
 
-  const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
+  // Основной направленный свет спереди-сверху
+  const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1.0);
   directionalLight1.position.set(5, 10, 5);
   directionalLight1.castShadow = true;
   scene.add(directionalLight1);
 
-  const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
-  directionalLight2.position.set(-5, 5, -5);
+  // Дополнительный свет с другой стороны для устранения теней
+  const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.8);
+  directionalLight2.position.set(-5, 8, -5);
   scene.add(directionalLight2);
+
+  // Верхний свет для равномерного освещения
+  const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.6);
+  directionalLight3.position.set(0, 15, 0);
+  scene.add(directionalLight3);
+
+  // Боковой свет для дополнительной яркости
+  const directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.5);
+  directionalLight4.position.set(10, 5, 0);
+  scene.add(directionalLight4);
 
   // Контролы для вращения камеры
   controls = new OrbitControls(camera, renderer.domElement);
