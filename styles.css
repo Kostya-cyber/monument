@@ -34,6 +34,45 @@ header h1 {
   margin-top: 0.5rem;
 }
 
+.music-controls {
+  margin-top: 1.5rem;
+}
+
+.music-btn {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.music-btn:hover {
+  background: #34495e;
+}
+
+.music-btn:active {
+  background: #1a252f;
+}
+
+.music-btn.muted {
+  background: #95a5a6;
+}
+
+.music-btn.muted:hover {
+  background: #7f8c8d;
+}
+
+#music-icon {
+  font-size: 1.1rem;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;

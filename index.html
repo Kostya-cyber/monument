@@ -10,7 +10,23 @@
     <header>
       <h1>Памятник герою Советского Союза Г.И. Шибанову</h1>
       <p class="subtitle">Завещано помнить</p>
+      <div class="music-controls">
+        <button
+          id="music-toggle"
+          class="music-btn"
+          title="Включить/выключить музыку"
+        >
+          <span id="music-icon">🔊</span>
+          <span id="music-text">Музыка</span>
+        </button>
+      </div>
     </header>
+
+    <!-- Фоновая музыка -->
+    <audio id="background-music" loop>
+      <source src="Mark_Bernes_-_ZHuravli_48107359.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио элемент.
+    </audio>
 
     <main>
       <section class="poem-section">
@@ -177,6 +193,7 @@
         }
       }
     </script>
+    <script src="music-control.js"></script>
     <script type="module" src="model-viewer.js"></script>
     <noscript>
       <div
