@@ -147,6 +147,41 @@
         </p>
       </section>
 
+      <section class="gallery-section">
+        <h2>Фотогалерея</h2>
+        <div class="gallery">
+          <div class="gallery-item" onclick="openModal('1.jpg')">
+            <img src="1.jpg" alt="Памятник Г.И. Шибанову" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openModal('2.jpg')">
+            <img src="2.jpg" alt="Памятник Г.И. Шибанову" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openModal('3.jpg')">
+            <img src="3.jpg" alt="Памятник Г.И. Шибанову" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openModal('4.jpg')">
+            <img src="4.jpg" alt="Памятник Г.И. Шибанову" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openModal('5.jpg')">
+            <img src="5.jpg" alt="Памятник Г.И. Шибанову" loading="lazy" />
+          </div>
+          <div class="gallery-item" onclick="openModal('6.jpg')">
+            <img src="6.jpg" alt="Памятник Г.И. Шибанову" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Модальное окно для просмотра изображений -->
+      <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img
+          class="modal-content"
+          id="modalImage"
+          src=""
+          alt="Увеличенное изображение"
+        />
+      </div>
+
       <section class="reconstruction-section">
         <h2>Работа по реконструкции воинского захоронения в аг. Комсеничи</h2>
         <p>
@@ -181,7 +216,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2024 Памятник герою Советского Союза Г.И. Шибанову</p>
+      <p>Памятник герою Советского Союза Г.И. Шибанову</p>
       <p>Мы помним. Мы гордимся.</p>
     </footer>
 
@@ -194,6 +229,7 @@
       }
     </script>
     <script src="music-control.js"></script>
+    <script src="gallery.js"></script>
     <script type="module" src="model-viewer.js"></script>
     <noscript>
       <div
