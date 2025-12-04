@@ -1,0 +1,17 @@
+# Временные файлы
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Редакторы
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Логи
+*.log
+
+# Кэш
+.cache/
